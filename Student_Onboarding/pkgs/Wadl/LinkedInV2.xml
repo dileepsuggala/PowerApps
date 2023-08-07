@@ -1,0 +1,233 @@
+<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:service="https://unitedstates-002.azure-apim.net/apim/linkedinv2" xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" siena:serviceId="LinkedInV2" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="LinkedIn V2">Amplify your content's reach by easily sharing on LinkedIn. The connector targets LinkedIn API version 2.</doc>
+  <grammars>
+    <jsonTypes targetNamespace="https://unitedstates-002.azure-apim.net/apim/linkedinv2" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+      <string name="ShareArticle_RequestV2_content_def_title_def" />
+      <string name="ShareArticle_RequestV2_content_def_description_def" />
+      <string name="ShareArticle_RequestV2_content_def_content-url_def" />
+      <string name="ShareArticle_RequestV2_content_def_content-image-url_def" />
+      <object name="ShareArticle_RequestV2_content_def">
+        <property name="title" type="string" />
+        <property name="description" type="string" />
+        <property name="content-url" type="string" />
+        <property name="content-image-url" type="string" />
+      </object>
+      <boolean name="ShareArticle_RequestV2_distribution_def_linkedInDistributionTarget_def_visibleToGuest_def" />
+      <object name="ShareArticle_RequestV2_distribution_def_linkedInDistributionTarget_def">
+        <property name="visibleToGuest" type="boolean" />
+      </object>
+      <object name="ShareArticle_RequestV2_distribution_def">
+        <property name="linkedInDistributionTarget" typeRef="ShareArticle_RequestV2_distribution_def_linkedInDistributionTarget_def" />
+      </object>
+      <string name="ShareArticle_RequestV2_subject_def" />
+      <string name="ShareArticle_RequestV2_text_def_text_def" />
+      <object name="ShareArticle_RequestV2_text_def">
+        <property name="text" type="string" />
+      </object>
+      <object name="ShareArticle_RequestV2">
+        <property name="content" typeRef="ShareArticle_RequestV2_content_def" />
+        <property name="distribution" typeRef="ShareArticle_RequestV2_distribution_def" />
+        <property name="subject" type="string" />
+        <property name="text" typeRef="ShareArticle_RequestV2_text_def" />
+      </object>
+      <string name="PostUpdate_Request_commentary_def" />
+      <string name="PostUpdate_Request_visibility_def" />
+      <string name="PostUpdate_Request_lifecycleState_def" />
+      <boolean name="PostUpdate_Request_isReshareDisabledByAuthor_def" />
+      <string name="PostUpdate_Request_distribution_def_feedDistribution_def" />
+      <object name="PostUpdate_Request_distribution_def">
+        <property name="feedDistribution" type="string" />
+      </object>
+      <string name="PostUpdate_Request_content_def_article_def_description_def" />
+      <string name="PostUpdate_Request_content_def_article_def_source_def" />
+      <string name="PostUpdate_Request_content_def_article_def_title_def" />
+      <object name="PostUpdate_Request_content_def_article_def">
+        <property name="description" type="string" />
+        <property name="source" type="string" />
+        <property name="title" type="string" />
+      </object>
+      <object name="PostUpdate_Request_content_def">
+        <property name="article" typeRef="PostUpdate_Request_content_def_article_def" />
+      </object>
+      <object name="PostUpdate_Request">
+        <property name="commentary" type="string" />
+        <property name="visibility" type="string" />
+        <property name="lifecycleState" type="string" />
+        <property name="isReshareDisabledByAuthor" type="boolean" />
+        <property name="distribution" typeRef="PostUpdate_Request_distribution_def" />
+        <property name="content" typeRef="PostUpdate_Request_content_def" />
+      </object>
+      <string name="PostCompanyUpdate_Request_author_def" />
+      <string name="PostCompanyUpdate_Request_commentary_def" />
+      <string name="PostCompanyUpdate_Request_visibility_def" />
+      <string name="PostCompanyUpdate_Request_lifecycleState_def" />
+      <boolean name="PostCompanyUpdate_Request_isReshareDisabledByAuthor_def" />
+      <string name="PostCompanyUpdate_Request_distribution_def_feedDistribution_def" />
+      <object name="PostCompanyUpdate_Request_distribution_def">
+        <property name="feedDistribution" type="string" />
+      </object>
+      <string name="PostCompanyUpdate_Request_content_def_article_def_description_def" />
+      <string name="PostCompanyUpdate_Request_content_def_article_def_source_def" />
+      <string name="PostCompanyUpdate_Request_content_def_article_def_title_def" />
+      <object name="PostCompanyUpdate_Request_content_def_article_def">
+        <property name="description" type="string" />
+        <property name="source" type="string" />
+        <property name="title" type="string" />
+      </object>
+      <object name="PostCompanyUpdate_Request_content_def">
+        <property name="article" typeRef="PostCompanyUpdate_Request_content_def_article_def" />
+      </object>
+      <object name="PostCompanyUpdate_Request">
+        <property name="author" type="string" />
+        <property name="commentary" type="string" />
+        <property name="visibility" type="string" />
+        <property name="lifecycleState" type="string" />
+        <property name="isReshareDisabledByAuthor" type="boolean" />
+        <property name="distribution" typeRef="PostCompanyUpdate_Request_distribution_def" />
+        <property name="content" typeRef="PostCompanyUpdate_Request_content_def" />
+      </object>
+      <string name="ShareCompanyUpdate_RequestV2_owner_def" />
+      <string name="ShareCompanyUpdate_RequestV2_content_def_title_def" />
+      <string name="ShareCompanyUpdate_RequestV2_content_def_description_def" />
+      <string name="ShareCompanyUpdate_RequestV2_content_def_content-url_def" />
+      <string name="ShareCompanyUpdate_RequestV2_content_def_content-image-url_def" />
+      <object name="ShareCompanyUpdate_RequestV2_content_def">
+        <property name="title" type="string" />
+        <property name="description" type="string" />
+        <property name="content-url" type="string" />
+        <property name="content-image-url" type="string" />
+      </object>
+      <boolean name="ShareCompanyUpdate_RequestV2_distribution_def_linkedInDistributionTarget_def_visibleToGuest_def" />
+      <object name="ShareCompanyUpdate_RequestV2_distribution_def_linkedInDistributionTarget_def">
+        <property name="visibleToGuest" type="boolean" />
+      </object>
+      <object name="ShareCompanyUpdate_RequestV2_distribution_def">
+        <property name="linkedInDistributionTarget" typeRef="ShareCompanyUpdate_RequestV2_distribution_def_linkedInDistributionTarget_def" />
+      </object>
+      <string name="ShareCompanyUpdate_RequestV2_subject_def" />
+      <string name="ShareCompanyUpdate_RequestV2_text_def_text_def" />
+      <object name="ShareCompanyUpdate_RequestV2_text_def">
+        <property name="text" type="string" />
+      </object>
+      <object name="ShareCompanyUpdate_RequestV2">
+        <property name="owner" type="string" />
+        <property name="content" typeRef="ShareCompanyUpdate_RequestV2_content_def" />
+        <property name="distribution" typeRef="ShareCompanyUpdate_RequestV2_distribution_def" />
+        <property name="subject" type="string" />
+        <property name="text" typeRef="ShareCompanyUpdate_RequestV2_text_def" />
+      </object>
+      <string name="Share_ResponseV2_id_def" />
+      <object name="Share_ResponseV2">
+        <property name="id" type="string" />
+      </object>
+      <string name="ListCompanies_ResponseV2_items_def_companyUrn_def" />
+      <string name="ListCompanies_ResponseV2_items_def_companyName_def" />
+      <object name="ListCompanies_ResponseV2_items_def">
+        <property name="companyUrn" type="string" />
+        <property name="companyName" type="string" />
+      </object>
+      <array typeRef="ListCompanies_ResponseV2_items_def" name="ListCompanies_ResponseV2" />
+    </jsonTypes>
+  </grammars>
+  <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://unitedstates-002.azure-apim.net/apim/linkedinv2">
+    <resource path="/{connectionId}/v2/people/shares">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="POST" id="ShareUpdateV2" actionName="ShareUpdateV2" siena:isDeprecated="true">
+        <doc title="Share an article V2 [DEPRECATED]&#xA;Post an article using a URL to the content you wish to share. LinkedIn analyzes the included URL and automatically identifies the title, description, image, etc. You can overwrite the auto-identified content by providing the title, description and image directly." />
+        <request>
+          <representation mediaType="application/json">
+            <param style="plain" name="content" path="/content" type="service:ShareArticle_RequestV2_content_def" required="true" />
+            <param style="plain" name="distribution" path="/distribution" type="service:ShareArticle_RequestV2_distribution_def" required="true" />
+            <param style="plain" name="subject" path="/subject" type="xs:string" />
+            <param style="plain" name="text" path="/text" type="service:ShareArticle_RequestV2_text_def" />
+          </representation>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:Share_ResponseV2" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v2/companies/shares">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="POST" id="ShareCompanyUpdateV2" actionName="ShareCompanyUpdateV2" siena:isDeprecated="true">
+        <doc title="Share a company update V2 [DEPRECATED]&#xA;Post a company update (article) using a URL to the content you wish to share. LinkedIn analyzes the included URL and automatically identifies the title, description, image, etc. You can overwrite the auto-identified content by providing the title, description and image directly." />
+        <request>
+          <representation mediaType="application/json">
+            <param style="plain" name="owner" path="/owner" type="xs:string" required="true" />
+            <param style="plain" name="content" path="/content" type="service:ShareCompanyUpdate_RequestV2_content_def" required="true" />
+            <param style="plain" name="distribution" path="/distribution" type="service:ShareCompanyUpdate_RequestV2_distribution_def" required="true" />
+            <param style="plain" name="subject" path="/subject" type="xs:string" />
+            <param style="plain" name="text" path="/text" type="service:ShareCompanyUpdate_RequestV2_text_def" />
+          </representation>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:Share_ResponseV2" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/company/rest/posts">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="POST" id="PostCompanyUpdate" actionName="PostCompanyUpdate" siena:isDeprecated="false">
+        <doc title="Post an article on company page&#xA;Post a company article with posts api." />
+        <request>
+          <representation mediaType="application/json">
+            <param style="plain" name="author" path="/author" type="xs:string" required="true" />
+            <param style="plain" name="commentary" path="/commentary" type="xs:string" required="true" />
+            <param style="plain" name="visibility" path="/visibility" type="xs:string" required="true">
+              <option value="Public" />
+              <option value="Logged in members only" />
+            </param>
+            <param style="plain" name="lifecycleState" path="/lifecycleState" type="xs:string" required="true" default="PUBLISHED" />
+            <param style="plain" name="isReshareDisabledByAuthor" path="/isReshareDisabledByAuthor" type="xs:boolean" />
+            <param style="plain" name="distribution" path="/distribution" type="service:PostCompanyUpdate_Request_distribution_def" required="true" />
+            <param style="plain" name="content" path="/content" type="service:PostCompanyUpdate_Request_content_def" required="true" />
+          </representation>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:Share_ResponseV2" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/people/rest/posts">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="POST" id="PostUpdate" actionName="PostUpdate" siena:isDeprecated="false">
+        <doc title="Post an article&#xA;Post an article using posts api." />
+        <request>
+          <representation mediaType="application/json">
+            <param style="plain" name="commentary" path="/commentary" type="xs:string" required="true" />
+            <param style="plain" name="visibility" path="/visibility" type="xs:string" required="true">
+              <option value="Public" />
+              <option value="Connections Only" />
+              <option value="Logged in members only" />
+            </param>
+            <param style="plain" name="lifecycleState" path="/lifecycleState" type="xs:string" required="true" default="PUBLISHED" />
+            <param style="plain" name="isReshareDisabledByAuthor" path="/isReshareDisabledByAuthor" type="xs:boolean" />
+            <param style="plain" name="distribution" path="/distribution" type="service:PostUpdate_Request_distribution_def" required="true" />
+            <param style="plain" name="content" path="/content" type="service:PostUpdate_Request_content_def" required="true" />
+          </representation>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:Share_ResponseV2" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v2/organizationalEntityAcls">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="GET" id="ListCompaniesV2" actionName="ListCompaniesV2" siena:isDeprecated="false">
+        <doc title="List my companies V2&#xA;This operation returns a list of all companies that you are an administrator of." />
+        <request />
+        <response>
+          <representation mediaType="application/json" element="service:ListCompanies_ResponseV2" />
+        </response>
+      </method>
+    </resource>
+  </resources>
+  <authenticationProviders xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <connectionProvider id="PowerAppAuth" siena:connectionProviderId="shared_linkedinv2" />
+  </authenticationProviders>
+  <template xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <variable name="connectionId">
+      <modifyParams style="template" name="connectionId" attribute="fixed" />
+    </variable>
+  </template>
+</application>
