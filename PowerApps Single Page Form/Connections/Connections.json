@@ -1,0 +1,27 @@
+{
+  "2305266e-afbc-4d28-8c54-688920a0b2b3": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/globalperconnector-train1/1.0.1639.3312/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://7wc0r8.sharepoint.com/sites/Dileep": {
+        "dataSources": {
+          "Task": {
+            "tableName": "83d3c362-f949-450c-acef-4b5207c4f2cd"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Task"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "2305266e-afbc-4d28-8c54-688920a0b2b3"
+  }
+}
