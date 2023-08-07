@@ -1,0 +1,178 @@
+Filter_Screen As screen:
+    OnVisible: =ClearCollect(Alldata,Filter(sampledatawinterathlete,Item<=500),Filter(sampledatawinterathlete,Item > 500 && Item < 1000 ),Filter(sampledatawinterathlete,Item >1000 && Item < 1500 ), Filter(sampledatawinterathlete,Item >1500 && Item < 2000), Filter(sampledatawinterathlete,Item > 2000 && Item <2500 ),Filter(sampledatawinterathlete,Item > 2500 && Item < 3000))
+
+    "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+        DelayItemLoading: =true
+        Height: =542
+        Items: |-
+            =Filter(
+                Alldata,
+                StartsWith(
+                    Title,
+                    Inpname.Text
+                ) Or StartsWith(
+                    Age,
+                   Value(InpAge.Text)
+                ) Or 
+                
+                IsBlank(ComboBox2.SelectedItems.Value) || IsEmpty(ComboBox2.SelectedItems.Value) || Sport.Value = ComboBox2.Selected.Value
+            )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =90
+        Width: =1366
+        Y: =225
+        ZIndex: =1
+
+        Title6 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =42
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Name (Title)'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =258
+            X: =14
+            Y: =28
+            ZIndex: =1
+
+        NextArrow6 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(166, 166, 166, 1)
+            Height: =50
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="View item details"
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =3
+
+        Separator6 As rectangle:
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =4
+
+        Rectangle8 As rectangle:
+            Height: =Parent.TemplateHeight - Separator6.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =5
+
+        Title6_1 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =42
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Name (Title)'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =258
+            X: =242
+            Y: =20
+            ZIndex: =6
+
+        Title6_2 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =42
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Name (Title)'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =258
+            X: =500
+            Y: =20
+            ZIndex: =7
+
+    TextInput5 As text:
+        Default: =CountRows(Gallery4.AllItems)
+        Height: =37
+        Width: =165
+        X: =404
+        Y: =162
+        ZIndex: =2
+
+    Inpname As text:
+        Default: =
+        X: =169
+        Y: =20
+        ZIndex: =3
+
+    Button7 As button:
+        Height: =97
+        OnSelect: =ClearCollect(Alldata,Filter(sampledatawinterathlete,Item<=500),Filter(sampledatawinterathlete,Item > 500 && Item < 1000 ),Filter(sampledatawinterathlete,Item >1000 && Item < 1500 ), Filter(sampledatawinterathlete,Item >1500 && Item < 2000), Filter(sampledatawinterathlete,Item > 2000 && Item <2500 ),Filter(sampledatawinterathlete,Item > 2500 && Item < 3000))
+        Text: ="Clear Collect"
+        Width: =267
+        X: =1060
+        Y: =20
+        ZIndex: =4
+
+    Label9 As label:
+        FontWeight: =FontWeight.Bold
+        Text: ="Name"
+        Y: =20
+        ZIndex: =5
+
+    InpAge As text:
+        Default: =""
+        X: =169
+        Y: =100
+        ZIndex: =6
+
+    Label11 As label:
+        Size: =20
+        Text: ="Age"
+        Y: =100
+        ZIndex: =7
+
+    Label12 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =37
+        Text: ="No. Of records displaying"
+        Width: =262
+        X: =45
+        Y: =162
+        ZIndex: =8
+
+    Label13 As label:
+        FontWeight: =FontWeight.Bold
+        Text: ="Sport"
+        X: =530
+        Y: =20
+        ZIndex: =9
+
+    Button6 As button:
+        Height: =62
+        OnSelect: =Reset(ComboBox2);Reset(InpAge);Reset(Inpname)
+        Text: ="Reset"
+        Width: =202
+        X: =739
+        Y: =117
+        ZIndex: =11
+
+    ComboBox2 As combobox:
+        DisplayFields: =["Value"]
+        IsSearchable: =false
+        Items: =Choices(sampledatawinterathlete.Sport)
+        SearchFields: =["Value"]
+        SearchItems: =[]
+        X: =635
+        Y: =20
+        ZIndex: =12
+

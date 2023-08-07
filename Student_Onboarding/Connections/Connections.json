@@ -1,0 +1,69 @@
+{
+  "74fce0dc-9172-4d38-bf5c-272032ab6654": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/globalperconnector-train1/1.0.1639.3312/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://7wc0r8.sharepoint.com/sites/Dileep": {
+        "dataSources": {
+          "sampledatawinterathlete": {
+            "tableName": "d12e2fda-1a80-46fb-b126-eec78ca1da0e"
+          },
+          "sampledataworkorders": {
+            "tableName": "4a9a294f-1d30-4ebf-a836-1a48df0698df"
+          },
+          "Students Onboarding": {
+            "tableName": "b254c1fb-d16a-47c1-95a4-ecc7e6d25e83"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Students Onboarding",
+      "sampledataworkorders",
+      "sampledatawinterathlete"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "74fce0dc-9172-4d38-bf5c-272032ab6654"
+  },
+  "a5a42150-a4d8-444f-a589-fde8b401b70c": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1644/1.0.1644.3342/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "a5a42150-a4d8-444f-a589-fde8b401b70c"
+  },
+  "ed8d837b-3ebd-495c-9ebf-a6e5098744d1": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "LinkedIn V2",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/LinkedinV2PostRolloutWithImageCheckFix/1.0.1646.3352/linkedinv2/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_linkedinv2",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "LinkedInV2"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "ed8d837b-3ebd-495c-9ebf-a6e5098744d1"
+  }
+}

@@ -1,0 +1,207 @@
+People_screen As screen:
+
+    Rectangle1_5 As rectangle:
+        BorderColor: =RGBA(202, 202, 202, 1)
+        Fill: =RGBA(102, 113, 166, 1)
+        Width: =1366
+        ZIndex: =1
+
+    ComboBox1 As combobox:
+        DisplayFields: =["DisplayName","Mail"]
+        Height: =85
+        Items: |-
+            =Office365Users.SearchUserV2({searchTerm:ComboBox1.SearchText,top:10}).value
+        SearchFields: =["DisplayName"]
+        SearchItems: |-
+            =Search(Office365Users.SearchUserV2({searchTerm:ComboBox1.SearchText,top:10}).value,ComboBox1.SearchText,"DisplayName")
+        Template: =ListItemTemplate.Person
+        Width: =495
+        X: =435
+        Y: =142
+        ZIndex: =2
+
+    Label14 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =69
+        Size: =20
+        Text: ="People Picker"
+        Width: =345
+        X: =599
+        Y: =15
+        ZIndex: =3
+
+    Icon7 As icon.Home:
+        Height: =69
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Home_Screen)
+        Width: =86
+        X: =15
+        Y: =15
+        ZIndex: =4
+
+    DataTable1 As dataTable.datatable:
+        BorderStyle: =BorderStyle.Solid
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =510
+        Items: ='Students Onboarding'
+        Width: =1352
+        X: =12
+        Y: =258
+        ZIndex: =5
+
+        Title_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Title"
+            FieldName: ="Title"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =1
+            Text: =ThisItem.Title
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+        "'First Name_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="First Name"
+            FieldName: ="FirstName"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =2
+            Text: =ThisItem.'First Name'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+        "'Last Name_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Last Name"
+            FieldName: ="LastName"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =3
+            Text: =ThisItem.'Last Name'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =3
+
+        Email_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Email"
+            FieldName: ="Email"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =4
+            Text: =ThisItem.Email
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =4
+
+        "'Contact Number_Column1' As dataTableColumn.numberColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Contact Number"
+            FieldName: ="ContactNumber"
+            FieldVariantName: ="numberColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =5
+            Text: =ThisItem.'Contact Number'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =5
+
+        "'Date Of Birth_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Date Of Birth"
+            FieldName: ="DateOfBirth"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =6
+            Text: =ThisItem.'Date Of Birth'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =6
+
+        Gender_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Gender"
+            FieldName: ="Gender"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =7
+            Text: =ThisItem.Gender.Value
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =7
+
+        CurrentStatus_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="CurrentStatus"
+            FieldName: ="CurrentStatus"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =8
+            Text: =ThisItem.CurrentStatus.Value
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =8
+
+        "'Previously Onboarded_Column1' As dataTableColumn.booleanColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Previously Onboarded"
+            FieldName: ="PreviouslyOnboarded"
+            FieldVariantName: ="booleanColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =9
+            Text: =ThisItem.'Previously Onboarded'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =9
+
+        Manager_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Manager"
+            FieldName: ="Manager"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =10
+            Text: =ThisItem.Manager
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =10
+
+        Attachments_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Attachments"
+            FieldName: ="{Attachments}"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =11
+            Text: =ThisItem.Attachments
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =11
+

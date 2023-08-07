@@ -1,0 +1,457 @@
+"Success_Screen As screen.'tabletLayout_Success_ver3.0'":
+
+    iconCircle1 As circle.Circle:
+        Fill: =RGBA(102, 113, 166, 1)
+        X: =1043
+        Y: =239
+        ZIndex: =1
+
+    iconCheck1 As icon.Check:
+        Height: =iconCircle1.Height
+        Icon: =Icon.Check
+        PaddingBottom: =Self.PaddingTop
+        PaddingLeft: =Self.PaddingTop
+        PaddingRight: =Self.PaddingTop
+        PaddingTop: =24
+        Width: =iconCircle1.Width
+        X: =1043
+        Y: =239
+        ZIndex: =2
+
+    LblSuccessMsg1 As label:
+        Align: =Align.Center
+        Height: =74
+        Size: =20
+        Text: ="This was successfully completed"
+        Width: =546
+        X: =820
+        Y: =478
+        ZIndex: =3
+
+    Rectangle1_2 As rectangle:
+        Fill: =RGBA(102, 113, 166, 1)
+        Width: =1366
+        ZIndex: =5
+
+    Icon1_1 As icon.Home:
+        Height: =100
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Home_Screen,ScreenTransition.Fade)
+        Width: =93
+        ZIndex: =6
+
+    Label3 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =112
+        Size: =23
+        Text: ="Students Onboarding"
+        Width: =362
+        X: =502
+        ZIndex: =7
+
+    Label4 As label:
+        Height: =75
+        Size: =23
+        Text: |-
+            ="ID: " &Form1.LastSubmit.ID
+        VerticalAlign: =VerticalAlign.Top
+        Width: =100
+        X: =1043
+        Y: =371
+        ZIndex: =8
+
+    FormViewer1 As formViewer:
+        DataSource: ='Students Onboarding'
+        Height: =643
+        Item: =Form1.LastSubmit
+        NumberOfColumns: =2
+        Width: =852
+        X: =5
+        Y: =125
+        ZIndex: =9
+
+        Title_DataCard1 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Title"
+            Default: =ThisItem.Title
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Students Onboarding'],DataSourceInfo.DisplayName,"Title")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =true
+            Width: =426
+            X: =0
+            Y: =0
+            ZIndex: =10
+
+            DataCardKey1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey1.Y + DataCardKey1.Height + 5
+                ZIndex: =2
+
+        "'First Name_DataCard2' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="FirstName"
+            Default: =ThisItem.'First Name'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Students Onboarding'],DataSourceInfo.DisplayName,"FirstName")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =true
+            Width: =426
+            X: =1
+            Y: =0
+            ZIndex: =10
+
+            DataCardKey11 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue11 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey11.Y + DataCardKey11.Height + 5
+                ZIndex: =2
+
+        "'Last Name_DataCard2' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="LastName"
+            Default: =ThisItem.'Last Name'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Students Onboarding'],DataSourceInfo.DisplayName,"LastName")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =true
+            Width: =426
+            X: =0
+            Y: =1
+            ZIndex: =10
+
+            DataCardKey13 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue13 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey13.Y + DataCardKey13.Height + 5
+                ZIndex: =2
+
+        Email_DataCard2 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Email"
+            Default: =ThisItem.Email
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Students Onboarding'],DataSourceInfo.DisplayName,"Email")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =true
+            Width: =426
+            X: =1
+            Y: =1
+            ZIndex: =10
+
+            DataCardKey14 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue14 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey14.Y + DataCardKey14.Height + 5
+                ZIndex: =2
+
+        "'Contact Number_DataCard2' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ContactNumber"
+            Default: =ThisItem.'Contact Number'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Students Onboarding'],DataSourceInfo.DisplayName,"ContactNumber")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =true
+            Width: =426
+            X: =0
+            Y: =2
+            ZIndex: =10
+
+            DataCardKey15 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue15 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey15.Y + DataCardKey15.Height + 5
+                ZIndex: =2
+
+        "'Date Of Birth_DataCard2' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="DateOfBirth"
+            Default: =ThisItem.'Date Of Birth'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Students Onboarding'],DataSourceInfo.DisplayName,"DateOfBirth")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =true
+            Width: =426
+            X: =1
+            Y: =2
+            ZIndex: =10
+
+            DataCardKey16 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue16 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey16.Y + DataCardKey16.Height + 5
+                ZIndex: =2
+
+        Gender_DataCard2 As typedDataCard.comboBoxViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Gender"
+            Default: =ThisItem.Gender
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Students Onboarding'],DataSourceInfo.DisplayName,"Gender")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =true
+            Update: =DataCardValue17.Selected
+            Width: =426
+            X: =0
+            Y: =3
+            ZIndex: =10
+
+            DataCardKey17 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue17 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Items: =Choices([@'Students Onboarding'].Gender)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Students Onboarding'.Gender,DataCardValue17.SearchText)
+                SelectMultiple: =false
+                Width: =Parent.Width - 60
+                X: =58
+                Y: =DataCardKey17.Y + DataCardKey17.Height + 5
+                ZIndex: =2
+
+            ErrorMessage1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue17.Y + DataCardValue17.Height
+                ZIndex: =3
+
+            StarVisible1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey17.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey17.Y
+                ZIndex: =4
+
+        "'Current  Status_DataCard2' As typedDataCard.comboBoxViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="CurrentStatus"
+            Default: =ThisItem.CurrentStatus
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Students Onboarding'],DataSourceInfo.DisplayName,"CurrentStatus")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =true
+            Update: =DataCardValue18.Selected
+            Width: =426
+            X: =1
+            Y: =3
+            ZIndex: =10
+
+            DataCardKey18 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue18 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Items: =Choices([@'Students Onboarding'].CurrentStatus)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Students Onboarding'.CurrentStatus,DataCardValue18.SearchText)
+                SelectMultiple: =false
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey18.Y + DataCardKey18.Height + 5
+                ZIndex: =2
+
+            ErrorMessage11 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue18.Y + DataCardValue18.Height
+                ZIndex: =3
+
+            StarVisible11 As label:
+                Align: =Align.Center
+                Height: =DataCardKey18.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey18.Y
+                ZIndex: =4
+
+        "'Previously Onboarded_DataCard2' As typedDataCard.toggleViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="PreviouslyOnboarded"
+            Default: =ThisItem.'Previously Onboarded'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Students Onboarding'],DataSourceInfo.DisplayName,"PreviouslyOnboarded")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =true
+            Width: =426
+            X: =0
+            Y: =4
+            ZIndex: =10
+
+            DataCardKey19 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue19 As toggleSwitch:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DisplayMode: =Parent.DisplayMode
+                X: =30
+                Y: =DataCardKey19.Y + DataCardKey19.Height + 5
+                ZIndex: =2
+
