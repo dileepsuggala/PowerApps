@@ -1,0 +1,175 @@
+Screen1 As screen:
+
+    Label1 As label:
+        Text: ="Employee Name"
+        X: =78
+        Y: =40
+        ZIndex: =1
+
+    Dropdown1 As dropdown:
+        Items: =Distinct(employeemobiles,Title)
+        X: =314
+        Y: =40
+        ZIndex: =2
+
+    Label1_1 As label:
+        Text: ="Brand"
+        X: =78
+        Y: =123
+        ZIndex: =3
+
+    Dropdown1_1 As dropdown:
+        Items: =Distinct(Filter(employeemobiles, Title = Dropdown1.Selected.Value),Mobile_Brand)
+        X: =314
+        Y: =123
+        ZIndex: =4
+
+    Label1_2 As label:
+        Text: ="Model"
+        X: =78
+        Y: =192
+        ZIndex: =5
+
+    Dropdown1_2 As dropdown:
+        Items: =Distinct(Filter(employeemobiles, Title = Dropdown1.Selected.Value ,Mobile_Brand = Dropdown1_1.Selected.Value ),Model)
+        X: =314
+        Y: =192
+        ZIndex: =6
+
+    Label1_3 As label:
+        Text: ="Color"
+        X: =78
+        Y: =261
+        ZIndex: =7
+
+    Dropdown1_3 As dropdown:
+        Items: =Distinct(Filter(employeemobiles,Model = Dropdown1_2.Selected.Value),Color)
+        X: =314
+        Y: =261
+        ZIndex: =8
+
+    Button1 As button:
+        OnSelect: |-
+            =Patch(
+                Mobiles_Employees,
+                Defaults(Mobiles_Employees),
+                {
+                    Title:Dropdown1.Selected.Value,
+                    Mobile_Brand:Dropdown1_1.Selected.Value,
+                    Model:Dropdown1_2.Selected.Value,
+                    Color:Dropdown1_3.Selected.Value
+            
+                }
+            );
+            Notify("Data Saved Successfully",NotificationType.Success,4000);Refresh(Mobiles_Employees);
+        Text: ="Patch"
+        X: =671
+        Y: =238
+        ZIndex: =9
+
+    DataTable1 As dataTable.datatable:
+        BorderStyle: =BorderStyle.Solid
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        HeadingFill: =RGBA(130, 141, 158, 1)
+        Height: =424
+        Items: =Search(Mobiles_Employees,txtSearch.Text,"Mobile_Brand","Model")
+        Visible: =true
+        Width: =1366
+        X: =0
+        Y: =342
+        ZIndex: =10
+
+        Title_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Employee_Name"
+            FieldName: ="Title"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =1
+            Text: =ThisItem.Title
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+        Mobile_Brand_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Mobile_Brand"
+            FieldName: ="Mobile_Brand"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            IsHyperlink: =true
+            LayoutHeight: =Parent.Height
+            Order: =2
+            Text: =ThisItem.Mobile_Brand
+            Width: =100
+            X: =283
+            Y: =0
+            ZIndex: =2
+
+        Model_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Model"
+            FieldName: ="Model"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =3
+            Text: =ThisItem.Model
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =3
+
+        Color_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Color"
+            FieldName: ="Color"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =4
+            Text: =ThisItem.Color
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =4
+
+    Button2 As button:
+        OnSelect: =Refresh(Mobiles_Employees)
+        Text: ="Refresh"
+        X: =861
+        Y: =238
+        ZIndex: =11
+
+    txtSearch As text:
+        Default: =
+        Height: =52
+        X: =959
+        Y: =40
+        ZIndex: =12
+
+    Label2 As label:
+        Height: =52
+        Text: ="Search by Brand/Model"
+        Width: =268
+        X: =711
+        Y: =40
+        ZIndex: =13
+
+    Icon1 As icon.Search:
+        Height: =52
+        Icon: =Icon.Search
+        X: =1215
+        Y: =40
+        ZIndex: =14
+
+    Icon2 As icon.Trash:
+        Icon: =Icon.Trash
+        OnSelect: =Remove(Mobiles_Employees,LookUp(Mobiles_Employees,Color = "green"))
+        X: =1279
+        Y: =249
+        ZIndex: =15
+

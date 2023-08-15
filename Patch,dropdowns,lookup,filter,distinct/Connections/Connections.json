@@ -1,0 +1,31 @@
+{
+  "d45b53df-7e07-495e-bca1-457fc52b4f2f": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/globalperconnector-train1/1.0.1639.3312/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://7wc0r8.sharepoint.com/sites/Dileep": {
+        "dataSources": {
+          "employeemobiles": {
+            "tableName": "6b8418d8-301e-49f1-b804-feb76b63574b"
+          },
+          "Mobiles_Employees": {
+            "tableName": "16f13dc1-df22-4425-8a7a-fb880a125bbc"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "employeemobiles",
+      "Mobiles_Employees"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "d45b53df-7e07-495e-bca1-457fc52b4f2f"
+  }
+}
