@@ -1,0 +1,56 @@
+HomeScreen As screen:
+
+    lblHeader As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(116, 116, 116, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =90
+        PaddingLeft: =App.Width-(App.Width/2)-200
+        Size: =20
+        Text: ="Leave Request Application"
+        Width: =App.Width
+        ZIndex: =1
+
+    lblFooter As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(116, 116, 116, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =65
+        PaddingLeft: =App.Width-(App.Width/2)-200
+        Size: =20
+        Text: =""
+        Width: =App.Width
+        Y: =703
+        ZIndex: =2
+
+    btnEmployee As button:
+        Fill: =RGBA(116, 116, 116, 1)
+        Height: =114
+        HoverFill: =ColorFade(RGBA(219, 219, 219, 1), -20%)
+        OnSelect: =Navigate(EmployeeScreen,ScreenTransition.Cover)
+        Text: ="Employee"
+        Width: =247
+        X: =146
+        Y: =339
+        ZIndex: =3
+
+    btnHR As button:
+        Fill: =RGBA(116, 116, 116, 1)
+        Height: =114
+        HoverFill: =ColorFade(RGBA(219, 219, 219, 1), -20%)
+        Text: ="HR"
+        Width: =269
+        X: =562
+        Y: =339
+        ZIndex: =4
+
+    btnManager As button:
+        Fill: =RGBA(116, 116, 116, 1)
+        Height: =114
+        HoverFill: =ColorFade(RGBA(219, 219, 219, 1), -20%)
+        Text: ="Manager"
+        Width: =244
+        X: =1005
+        Y: =339
+        ZIndex: =5
+

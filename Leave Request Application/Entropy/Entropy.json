@@ -1,0 +1,68 @@
+{
+  "ComponentIndexes": {},
+  "ControlUniqueGuids": {},
+  "ControlUniqueIds": {
+    "App": 1,
+    "btnEmployee": 7,
+    "btnHR": 9,
+    "btnManager": 10,
+    "EmployeeScreen": 11,
+    "HomeScreen": 4,
+    "Host": 3,
+    "lblFooter": 6,
+    "lblHeader": 5
+  },
+  "FunctionParamsInvariantScripts": {},
+  "FunctionParamsInvariantScriptsOnInstances": {},
+  "HeaderLastSavedDateTimeUTC": "11/27/2023 20:01:16",
+  "IsLegacyComponentAllowGlobalScopeCase": false,
+  "LocalConnectionIDReferences": {},
+  "LocalDatabaseReferencesAsEmpty": false,
+  "LocalResourceFileNames": {},
+  "LocalResourceRootPaths": {},
+  "OrderComponentMetadata": {},
+  "OrderComponentTemplate": {},
+  "OrderDataSource": {},
+  "OrderGroupControls": {},
+  "OrderPcfTemplate": {},
+  "OrderTemplate": {},
+  "OrderXMLTemplate": {
+    "button": 1,
+    "label": 0
+  },
+  "OverridablePropertiesEntry": {
+    "App": {},
+    "btnEmployee": {},
+    "btnHR": {},
+    "btnManager": {},
+    "EmployeeScreen": {},
+    "HomeScreen": {},
+    "Host": {},
+    "lblFooter": {},
+    "lblHeader": {}
+  },
+  "PCFDynamicSchemaForIRRetrievalEntry": {},
+  "PCFTemplateEntry": {},
+  "PublishOrderIndices": {
+    "App": 0,
+    "btnEmployee": 1,
+    "btnHR": 2,
+    "btnManager": 3,
+    "EmployeeScreen": 0,
+    "HomeScreen": 0,
+    "Host": 0,
+    "lblFooter": 4,
+    "lblHeader": 0
+  },
+  "ResourcesJsonIndices": {},
+  "RuleScreenIdWithoutScreen": {},
+  "TemplateVersions": {},
+  "VolatileProperties": {
+    "AnalysisLoadTime": 0.0191569,
+    "ControlCount": {
+      "button": 2,
+      "label": 2
+    }
+  },
+  "WasLocalDatabaseReferencesEmpty": true
+}
